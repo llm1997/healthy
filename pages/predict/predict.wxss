@@ -14,6 +14,8 @@
 .more {
   text-align: right;
   color: #66b3ff;
+  font-size: 18px;
+  font-family: "楷体";
 }
 
 .search-container {
@@ -22,11 +24,58 @@
 }
 
 .search {
-  font-size: 30rpx;
-  padding-right: 200rpx;
+  font-size: 70px;
+  padding-right: 250rpx;
   width: 100%;
-}
-.weui-search-bar__cancel-btn{
-  color: #00BFFF;
+  font-family: "楷体";
+  font-weight: 600
 }
 
+.weui-search-bar__cancel-btn {
+  color: #00bfff;
+}
+
+.reason {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.reason_illness {
+  margin-left: 20px;
+}
+
+.reason_illness_text {
+  font-size: 50rpx;
+  font-family: "华文行楷";
+}
+
+.line {
+  width: 100%;
+  height: 2rpx;
+  background: #aaa;
+}
+
+.weui-search-bar__cancel-btn{
+  font-family: "楷体";
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.weui-search-bar__text{
+  font-family: "楷体";
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.weui-search-bar__input{
+  font-family: "楷体";
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.weui-icon-clear{
+  font-family: "楷体";
+  font-weight: 600;
+  font-size: 20px;
+}
