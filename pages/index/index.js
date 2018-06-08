@@ -12,7 +12,7 @@ Page({
     activeIndex: 0,
     sliderOffset: 0,
     sliderLeft: 0,
-    
+    findill:[],
     //搜索
     inputShowed: false,
     inputVal: ""
@@ -92,22 +92,30 @@ Page({
     this.setData({
       inputShowed: true
     }); 
+    console.log(4)
   },
   hideInput: function () {
     this.setData({
       inputVal: "",
       inputShowed: false
     });
+    console.log(3)
   },
   clearInput: function () {
     this.setData({
       inputVal: ""
     });
+    console.log(2)
   },
   inputTyping: function (e) {
+    var that=this;
     this.setData({
       inputVal: e.detail.value
     });
+    var url = "https://llmsx.top/illsousou?illName=" + that.data.inputVal;
+    console.log(url)
+    that.getIllData(url);
+    
   },
   //搜索结束
 
@@ -127,7 +135,9 @@ Page({
       success: function (res) {
         console.log("success")
         console.log(res)
-        that.processDoubanDate(res.data)
+        that.setData({
+          findill:res
+        })
       },
       fail: function (res) {
         console.log("fail")
@@ -138,26 +148,50 @@ Page({
     })
   },
 
+  /**
+   * 
+   * 跳转详情
+   */
+  onPostTab: function (event) {
+    var illId = event.currentTarget.dataset.illid;
+    wx.navigateTo({
+      url: '../index/article/article?illId=' + illId,
+    })
+  },
+
+  /**
+   * 
+   * 跳转详情
+   */
+  findMallTab: function (event) {
+    var illName = this.data.inputVal;
+    console.log(illName)
+    wx.navigateTo({
+      url: 'result/result?illName=' + illName,
+    })
+  }
+
+
   //
   /**
  * 处理数据processDoubanDate
  */
 
-  processDoubanDate: function (illdata) {
-    // for (var idx in illdata) {
-    //   var ill = illdata.subjects[idx];
-    //   var name = subject.name;
+  // processDoubanDate: function (illdata) {
+  //   // for (var idx in illdata) {
+  //   //   var ill = illdata.subjects[idx];
+  //   //   var name = subject.name;
       
-    //   var temp = {
-    //     name: name,
-    //     id: subject.id
-    //   }
-    //   movies.push(temp);
-    // }
-    this.setData({
-      illdatas: illdata
-    })
-  },
+  //   //   var temp = {
+  //   //     name: name,
+  //   //     id: subject.id
+  //   //   }
+  //   //   movies.push(temp);
+  //   // }
+  //   this.setData({
+  //     illdatas: illdata
+  //   })
+  // },
 
 })
 

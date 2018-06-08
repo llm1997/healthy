@@ -1,0 +1,12 @@
+<import src="../illitem/item-ill-template.wxml" />
+<view class='illness_list'>疾病列表</view>
+ 
+  <block wx:for-items="{{findill.data}}" wx:key="item" >
+      <view data-illid="{{item.id}}" catchtap='onPostTab'>
+       <template is="illnessTemplate" data="{{...item}}"/> 
+      </view>
+              
+  </block>
+  <view class='button_color'>
+<button class="weui-btn"  type="default" plain="true" catchtap="getIllData">加载完毕</button>
+</view>

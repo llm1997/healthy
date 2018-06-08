@@ -1,43 +1,43 @@
 {
-  "pages":[
-      "pages/personal/personal",
+  "pages": [
+    "pages/personal/personal",
     "pages/index/index",
     "pages/logs/logs",
-   "pages/personal/weight/weight",
+    "pages/personal/weight/weight",
     "pages/predict/predict",
     "pages/test/test",
     "pages/index/article/article",
-    "pages/wechat/wechat"
+    "pages/wechat/wechat",
+    "pages/index/result/result"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#405f80",
     "navigationBarTitleText": "小健康",
-    "navigationBarTextStyle":"black",
-    "navigationBarBackgroundColor": "#405f80"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "borderStyle": "white",
     "position": "bottom",
     "list": [
-        {
-          "pagePath": "pages/index/index",
-          "text": "百科",
-          "iconPath": "images/tab/dianying.png",
-          "selectedIconPath": "images/tab/dianying_hl.png"
-        },
-        {
-          "pagePath": "pages/predict/predict",
-          "text": "预测",
-          "iconPath": "images/tab/dianying.png",
-          "selectedIconPath": "images/tab/dianying_hl.png"
-        },
-        {
-          "pagePath": "pages/personal/personal",
-          "text": "个人",
-          "iconPath": "images/tab/yuedu.png",
-          "selectedIconPath": "images/tab/yuedu_hl.png"
-        }
+      {
+        "pagePath": "pages/index/index",
+        "text": "百科",
+        "iconPath": "images/tab/dianying.png",
+        "selectedIconPath": "images/tab/dianying_hl.png"
+      },
+      {
+        "pagePath": "pages/predict/predict",
+        "text": "预测",
+        "iconPath": "images/tab/dianying.png",
+        "selectedIconPath": "images/tab/dianying_hl.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "个人",
+        "iconPath": "images/tab/yuedu.png",
+        "selectedIconPath": "images/tab/yuedu_hl.png"
+      }
     ]
   },
   "networkTimeout": {
@@ -45,5 +45,4 @@
     "downloadFile": 10000
   },
   "debug": true
-  
 }
