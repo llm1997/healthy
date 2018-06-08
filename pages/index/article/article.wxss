@@ -1,0 +1,47 @@
+page{
+    background-color: #FFFFFF;
+}
+image{
+    margin: 4px 0;
+}
+.title{
+  text-align: center;
+  background-color: #ADD8E6;
+ 
+  font-family: "华文行楷";
+  letter-spacing: 20px;
+  font-weight: 600;
+  font-size: 60rpx;
+  
+}
+.weui-article__h3{
+  font-family: "华文行楷";
+  font-size: 45rpx;
+}
+.weui-article__p{
+  font-size: 40rpx;
+  font-family: "楷体";
+}
+.weui-article__section1{
+   border: 3px solid #70bcf6;
+   border-radius: 5px; 
+}
+.weui-article__h3{
+  background-color: #98FB98;
+}
+.weui-article__section2{
+   border: 3px solid #70bcf6;
+   margin-top: 10px;
+    border-radius: 5px; 
+}
+.weui-article__section3{
+   border: 3px solid #70bcf6;
+   margin-top: 10px; 
+    border-radius: 5px; 
+}
+.page__bd{
+  background-image: url("http://image20.it168.com/201507_800x800/2243/88179bc37ca3b4f5.jpg")
+}
+.page__hd{
+  margin-top: -2px;
+}

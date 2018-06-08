@@ -1,0 +1,134 @@
+<import src="predict-template/predict_template.wxml" />
+<view class="page">
+  <!-- 一 -->
+  <view>
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <input type="text" class="weui-search-bar__input" placeholder="症状1" value="{{inputVal1}}" focus="{{inputShowed1}}" bindinput="inputTyping1" />
+          <view class="weui-icon-clear" wx:if="{{inputVal1.length > 0}}" bindtap="clearInput1">
+            <icon type="clear" size="14"></icon>
+          </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed1}}" bindtap="showInput1">
+          <view class="weui-search-bar__text">症状1</view>
+        </label>
+      </view>
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed1}}" bindtap="hideInput1">取消</view>
+    </view>
+  </view>
+  <!-- 二 -->
+  <view>
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <input type="text" class="weui-search-bar__input" placeholder="症状2" value="{{inputVal2}}" focus="{{inputShowed2}}" bindinput="inputTyping2" />
+          <view class="weui-icon-clear" wx:if="{{inputVal2.length > 0}}" bindtap="clearInput2">
+            <icon type="clear" size="14"></icon>
+          </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed2}}" bindtap="showInput2">
+          <view class="weui-search-bar__text">症状2</view>
+        </label>
+      </view>
+
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed2}}" bindtap="hideInput2">取消</view>
+    </view>
+  </view>
+  <!-- 三 -->
+  <view>
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <input type="text" class="weui-search-bar__input" placeholder="症状3" value="{{inputVal3}}" focus="{{inputShowed3}}" bindinput="inputTyping3" />
+          <view class="weui-icon-clear" wx:if="{{inputVal3.length > 0}}" bindtap="clearInput3">
+            <icon type="clear" size="14"></icon>
+          </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed3}}" bindtap="showInput3">
+          <view class="weui-search-bar__text">症状3</view>
+        </label>
+      </view>
+
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed3}}" bindtap="hideInput3">取消</view>
+    </view>
+  </view>
+
+  <!-- 四 -->
+  <view hidden='{{more_reason4}}' bindlongtap='more_reason4Tap'>
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <input type="text" class="weui-search-bar__input" placeholder="症状4" value="{{inputVal4}}" focus="{{inputShowed4}}" bindinput="inputTyping4" />
+          <view class="weui-icon-clear" wx:if="{{inputVal4.length > 0}}" bindtap="clearInput4">
+            <icon type="clear" size="14"></icon>
+          </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed4}}" bindtap="showInput4">
+          <view class="weui-search-bar__text">症状4</view>
+        </label>
+      </view>
+
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed4}}" bindtap="hideInput4">取消</view>
+    </view>
+  </view>
+
+  <!-- 五 -->
+  <view hidden='{{more_reason5}}' bindlongtap='more_reason5Tap'>
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <input type="text" class="weui-search-bar__input" placeholder="症状5" value="{{inputVal5}}" focus="{{inputShowed5}}" bindinput="inputTyping5" />
+          <view class="weui-icon-clear" wx:if="{{inputVal5.length > 0}}" bindtap="clearInput5">
+            <icon type="clear" size="14"></icon>
+          </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed5}}" bindtap="showInput5">
+          <view class="weui-search-bar__text">症状5</view>
+        </label>
+      </view>
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed5}}" bindtap="hideInput5">取消</view>
+    </view>
+  </view>
+  <!-- 六 -->
+  <view hidden='{{more_reason6}}' bindlongtap='more_reason6Tap'>
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <input type="text" class="weui-search-bar__input" placeholder="症状6" value="{{inputVal6}}" focus="{{inputShowed6}}" bindinput="inputTyping6" />
+          <view class="weui-icon-clear" wx:if="{{inputVal6.length > 0}}" bindtap="clearInput6">
+            <icon type="clear" size="14"></icon>
+          </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed6}}" bindtap="showInput6">
+          <view class="weui-search-bar__text">症状6</view>
+        </label>
+      </view>
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed6}}" bindtap="hideInput6">取消</view>
+    </view>
+
+
+  </view>
+  <view class='search-container'>
+    <view class='more' bindtap='moreTap' hidden='{{more_more}}'>更多病症>></view>
+    <button class='search' plain='false' size="mini" type='default' bindtap='sInput'>搜索</button>
+
+  </view>
+
+  <text>{{reason}}</text>
+
+  <!-- <view>
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          
+          <input type="text" class="weui-search-bar__input"  value="{{inputVal}}" focus="{{inputShowed}}"  />
+         
+        </view>
+        <label class="weui-search-bar__label" >
+        </label>
+      </view>
+
+    </view>
+  </view> -->
+</view>

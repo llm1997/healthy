@@ -1,0 +1,12 @@
+<import src="../index/illitem/item-ill-template.wxml" />
+<view class='illness_list'>疾病列表</view>
+ 
+  <block wx:for-items="{{contentlist}}" wx:key="item" >
+      <view data-illid="{{item.id}}" catchtap='onPostTab'>
+       <template is="illnessTemplate" data="{{...item}}"/> 
+      </view>
+              
+  </block>
+  <view class='button_color'>
+<button class="weui-btn"  type="default" plain="true" catchtap="getIllData">点击更多</button>
+</view>

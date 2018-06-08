@@ -1,0 +1,13 @@
+<template name="illnessTemplate">
+<view class="weui-panel weui-panel_access">
+            
+            <view class="weui-panel__bd">
+                <view class="weui-media-box weui-media-box_text"  >
+                    <view class="illness_name">{{name}}</view>
+                    <view class="illness_desc">{{desc}}</view>
+                </view>
+               
+            </view>
+           
+</view>
+</template>

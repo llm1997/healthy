@@ -1,0 +1,12 @@
+.illness_name{
+  font-family: "楷体";
+  font-weight: 600;
+  background-color: #E0FFFF;
+  
+}
+ .weui-panel__bd{
+  background-color:#AFEEEE ;
+} 
+.illness_desc{
+
+}

@@ -1,0 +1,16 @@
+/* pages/test/test.wxss */
+@import "../index/illitem/item-ill-template.wxss";
+.illness_list{
+  font-family: "楷体";
+  font-size: 50rpx;
+  text-align: center;
+  font-weight: 600;
+  background-color: #ADD8E6;
+}
+.weui-btn{
+  font-family: "楷体";
+  font-weight: 600;
+}
+.button_color{
+  background-color: #ADD8E6;
+}

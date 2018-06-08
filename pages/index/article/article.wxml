@@ -1,0 +1,30 @@
+<view class="page">
+  <view class="article_title">
+    <view class="title">{{arIlldetail.data.illname}}</view>
+  </view>
+  <view class="page__bd">
+    <view class="weui-article">
+      <view class="weui-article__section">
+        <view class="weui-article__section1">
+          <view class="weui-article__h3">疾病简介</view>
+          <view class="weui-article__p">
+            <text>{{arIlldetail.data.illintroduce}} </text>
+          </view>
+        </view>
+        <view class="weui-article__section2">
+          <view class="weui-article__h3">常见症状</view>
+          <view class="weui-article__p">
+            <text>{{arIlldetail.data.illsymptom}}</text>
+          </view>
+        </view>
+
+        <view class="weui-article__section3">
+          <view class="weui-article__h3">预防措施</view>
+          <view class="weui-article__p">
+            <text>{{arIlldetail.data.illprecaution}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
