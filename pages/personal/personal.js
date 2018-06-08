@@ -8,7 +8,7 @@ Page({
                     {
                         img:"../../images/mine_2.png",
                         name:"健康查询",
-                        url:"weight/weight"
+                        url: "weight/weight"
                     },   
                 ]        
             }

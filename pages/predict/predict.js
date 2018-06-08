@@ -334,7 +334,7 @@ Page({
     var data = {
       syptoms:that.data.values
     };
-     var url = "https://llmsx.top/illpredict";
+     var url = "https://localhost/illpredict";
     
     network.requestLoading(url, data, message, function (res) {
       console.log(res)

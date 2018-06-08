@@ -16,6 +16,7 @@ App({
         success: function () {
           wx.getUserInfo({
             success: function (res) {
+              console.log(res+"123")
               that.globalData.userInfo = res.userInfo
               typeof cb == "function" && cb(that.globalData.userInfo)
             }
@@ -24,7 +25,7 @@ App({
         }
       })
     }
- 
+
   },
   globalData: {
     userInfo: null,

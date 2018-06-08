@@ -1,10 +1,12 @@
+var app = getApp()
+var network = require("../../../utils/util.js")
 Page({
   data: {
     showTopTips: false,
     weight:"",
     BP:"",
     height:"",
-
+    advice:[],
     checkboxItems: [
       { name: 'standard is dealt for u.', value: '0', checked: true },
       { name: 'standard is dealicient for u.', value: '1' }
@@ -99,21 +101,51 @@ Page({
   },
   heightInput: function (e) {//改变身高
     this.setData({
-      weight: e.detail.value
+      height: e.detail.value
     })
   },
   BPInput: function (e) {//改变血压
     this.setData({
-      weight: e.detail.value
+      BP: e.detail.value
     })
   },
 
   loginBtnClick: function (e) {//获取
-    console.log("用户名：" + this.data.weight);
+     var that=this;
+    console.log("用户名：" + that.data.weight);
+    console.log("用户名：" + that.data.height);
+    that.getIllInfo("加载数据")
   },
   bindTimeChange: function (e) {//改变时间
     this.setData({
       time: e.detail.value
     })
   },
+
+  /**
+   * 测试数据
+   */
+  getIllInfo: function (message) {
+    var that = this;
+
+    var data = {
+      weight: that.data.weight,
+      height: that.data.height
+    };
+    var url = "https://localhost/illperson";
+
+    network.requestLoading(url, data, message, function (res) {
+      console.log(res)
+
+      that.setData({
+        advice: res
+      })
+      console.log(that.data.reason)
+    }, function (res) {
+      wx.showToast({
+        title: '加载数据失败',
+      })
+
+    })
+  },  
 });
