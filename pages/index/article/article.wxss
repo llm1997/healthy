@@ -17,18 +17,19 @@ image{
 .weui-article__h3{
   font-family: "华文行楷";
   font-size: 45rpx;
+  background-color: #98FB98;
 }
-.weui-article__p{
-  font-size: 40rpx;
+.weui-article__p1{
+ font-size: 40rpx;
   font-family: "楷体";
+  
 }
+
 .weui-article__section1{
    border: 3px solid #70bcf6;
    border-radius: 5px; 
 }
-.weui-article__h3{
-  background-color: #98FB98;
-}
+
 .weui-article__section2{
    border: 3px solid #70bcf6;
    margin-top: 10px;

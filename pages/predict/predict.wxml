@@ -115,15 +115,15 @@
 
   </view>
 
-  <block wx:for-items="{{reason}}" wx:key="item" >
-      <view data-illid="{{item.id}}" catchtap='onPostTab'>
-
-       <text>{{item.name}}</text>
-
+  <view class='reason'>
+    <block wx:for-items="{{reason}}" wx:key="item">
+      <view class='reason_illness' data-illid="{{item.id}}" catchtap='onPostTab'>
+        <text class='reason_illness_text'>{{item.name}}</text>
+      <view class='line'></view>
       </view>
-              
-  </block>
-
+    </block>
+  </view>
+ 
   <!-- <view>
     <view class="weui-search-bar">
       <view class="weui-search-bar__form">
