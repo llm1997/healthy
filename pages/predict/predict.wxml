@@ -115,7 +115,14 @@
 
   </view>
 
-  <text>{{reason}}</text>
+  <block wx:for-items="{{reason}}" wx:key="item" >
+      <view data-illid="{{item.id}}" catchtap='onPostTab'>
+
+       <text>{{item.name}}</text>
+
+      </view>
+              
+  </block>
 
   <!-- <view>
     <view class="weui-search-bar">

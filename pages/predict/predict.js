@@ -1,4 +1,5 @@
 var postsData = require("../../data/post-data.js")
+var network = require("../../utils/util.js")
 Page({
 
   /**
@@ -18,7 +19,8 @@ Page({
     more_reason4: true,
     more_reason5: true,
     more_reason6: true,
-    more_more: false
+    more_more: false,
+    values:[]
   },
 
   // 一栏
@@ -160,6 +162,7 @@ Page({
 
   // 点击搜索接收数据
   sInput: function (event) {
+    var that=this;
     // wx.showModal({
     //   title:提示,
     //   content:请按顺序填写
@@ -170,15 +173,14 @@ Page({
     var condition4 = this.data.inputVal4;
     var condition5 = this.data.inputVal5;
     var condition6 = this.data.inputVal6;
-    var valuess = [];
     if (condition6.length > 0) {
       if (condition1.length > 0 && condition2.length > 0 && condition3.length > 0 && condition4.length > 0 && condition5.length > 0){
-        Array[0] = condition1
-        Array[1] = condition2
-        Array[2] = condition3
-        Array[3] = condition4
-        Array[4] = condition5
-        Array[5] = condition6
+        that.data.values[0] = condition1
+        that.data.values[1] = condition2
+        that.data.values[2] = condition3
+        that.data.values[3] = condition4
+        that.data.values[4] = condition5
+        that.data.values[5] = condition6
       }else{
         wx.showToast({
           title: "请按顺序输入",
@@ -188,11 +190,11 @@ Page({
       }
     } else if (condition5.length > 0) {
       if (condition1.length > 0 && condition2.length > 0 && condition3.length > 0 && condition4.length > 0 ) {
-        Array[0] = condition1
-        Array[1] = condition2
-        Array[2] = condition3
-        Array[3] = condition4
-        Array[4] = condition5
+        that.data.values[0] = condition1
+        that.data.values[1] = condition2
+        that.data.values[2] = condition3
+        that.data.values[3] = condition4
+        that.data.values[4] = condition5
       } else {
         wx.showToast({
           title: "请按顺序输入",
@@ -202,10 +204,10 @@ Page({
       }
     } else if (condition4.length > 0) {
       if (condition1.length > 0 && condition2.length > 0 && condition3.length > 0 ) {
-        Array[0] = condition1
-        Array[1] = condition2
-        Array[2] = condition3
-        Array[3] = condition4
+        that.data.values[0] = condition1
+        that.data.values[1] = condition2
+        that.data.values[2] = condition3
+        that.data.values[3] = condition4
       } else {
         wx.showToast({
           title: "请按顺序输入",
@@ -215,9 +217,9 @@ Page({
       }
     } else if (condition3.length > 0) {
       if (condition1.length > 0 && condition2.length > 0 ) {
-        Array[0] = condition1
-        Array[1] = condition2
-        Array[2] = condition3
+        that.data.values[0] = condition1
+        that.data.values[1] = condition2
+        that.data.values[2] = condition3
       } else {
         wx.showToast({
           title: "请按顺序输入",
@@ -227,8 +229,8 @@ Page({
       }
     } else if (condition2.length > 0) {
       if (condition1.length > 0 ) {
-        Array[0] = condition1
-        Array[1] = condition2
+        that.data.values[0] = condition1
+        that.data.values[1] = condition2
       } else {
         wx.showToast({
           title: "请按顺序输入",
@@ -247,9 +249,9 @@ Page({
       })
     }
 
-    this.setData({
-      reason: Array[0]
-    })
+    that.getIllInfo("加载数据");
+
+    
   },
 
   // 增加症状
@@ -323,7 +325,31 @@ Page({
     })
   },
 
+  /**
+   * 测试数据
+   */
+  getIllInfo: function (message) {
+    var that = this;
+   
+    var data = {
+      syptoms:that.data.values
+    };
+     var url = "https://llmsx.top/illpredict";
+    
+    network.requestLoading(url, data, message, function (res) {
+      console.log(res)
+ 
+        that.setData({
+          reason:res
+        })
+        console.log(that.data.reason)
+    }, function (res) {
+      wx.showToast({
+        title: '加载数据失败',
+      })
 
+    })
+  },  
 
 
   /**
