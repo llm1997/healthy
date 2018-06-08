@@ -30,10 +30,13 @@ Page({
     });
   },
   hideInput1: function () {
-    this.setData({
+    var that=this
+    that.setData({
       inputVal1: "",
-      inputShowed1: false
+      inputShowed1: false,
+      values:[]
     });
+    console.log(that.data.inputVal1)
   },
   clearInput1: function () {
     this.setData({
@@ -181,7 +184,6 @@ Page({
         that.data.values[3] = condition4
         that.data.values[4] = condition5
         that.data.values[5] = condition6
-        that.getIllInfo( "加载数据");
       }else{
         wx.showToast({
           title: "请按顺序输入",
@@ -196,7 +198,6 @@ Page({
         that.data.values[2] = condition3
         that.data.values[3] = condition4
         that.data.values[4] = condition5
-        that.getIllInfo("加载数据");
       } else {
         wx.showToast({
           title: "请按顺序输入",
@@ -210,7 +211,6 @@ Page({
         that.data.values[1] = condition2
         that.data.values[2] = condition3
         that.data.values[3] = condition4
-        that.getIllInfo("加载数据");
       } else {
         wx.showToast({
           title: "请按顺序输入",
@@ -223,7 +223,6 @@ Page({
         that.data.values[0] = condition1
         that.data.values[1] = condition2
         that.data.values[2] = condition3
-        that.getIllInfo("加载数据");
       } else {
         wx.showToast({
           title: "请按顺序输入",
@@ -235,7 +234,7 @@ Page({
       if (condition1.length > 0 ) {
         that.data.values[0] = condition1
         that.data.values[1] = condition2
-        that.getIllInfo("加载数据");
+        console.log("123"+that.data.values[1])
       } else {
         wx.showToast({
           title: "请按顺序输入",
@@ -244,8 +243,7 @@ Page({
         })
       }
     } else if (condition1.length > 0) {
-      Array[0] = condition1;
-      that.getIllInfo("加载数据");
+      that.data.values[0] = condition1
     }else {
       wx.showToast({
         title: "请输入病情",
@@ -255,7 +253,7 @@ Page({
       })
     }
 
-   
+    that.getIllInfo("加载数据");
 
     
   },
@@ -340,7 +338,7 @@ Page({
     var data = {
       syptoms:that.data.values
     };
-     var url = "https://localhost/illpredict";
+     var url = "https://llmsx.top/illpredict";
     
     network.requestLoading(url, data, message, function (res) {
       console.log(res)
@@ -356,12 +354,7 @@ Page({
 
     })
   },  
-  onPostTab: function (event) {
-    var illId = event.currentTarget.dataset.illid;
-    wx.navigateTo({
-      url: '../index/article/article?illId=' + illId,
-    })
-  },
+
 
   /**
    * 生命周期函数--监听页面加载
@@ -417,5 +410,16 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  /**
+   * 
+   * 跳转详情
+   */
+  onPostTab: function (event) {
+    var illId = event.currentTarget.dataset.illid;
+    wx.navigateTo({
+      url: '../index/article/article?illId=' + illId,
+    })
   }
 })
