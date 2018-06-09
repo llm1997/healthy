@@ -168,6 +168,18 @@ cold:function(event){
   wx.navigateTo({
     url: '../index/article/article?illId=' + illId,
   })
+},
+  insomnia: function (event) {
+    var illId = 78;
+    wx.navigateTo({
+      url: '../index/article/article?illId=' + illId,
+    })
+  },
+  depressive: function (event) {
+  var illId = 79;
+  wx.navigateTo({
+    url: '../index/article/article?illId=' + illId,
+  })
 }
 })
 

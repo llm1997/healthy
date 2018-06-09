@@ -7,10 +7,10 @@
         <image src='/images/cold.jpg' class='swiper-image' catchtap='cold'></image>
       </swiper-item>
       <swiper-item>
-        <image src='/images/insomnia.jpg' class='swiper-image'></image>
+        <image src='/images/insomnia.jpg' class='swiper-image' catchtap='insomnia'></image>
       </swiper-item>
       <swiper-item>
-        <image src='/images/depressive.jpg' class='swiper-image'></image>
+        <image src='/images/depressive.jpg' class='swiper-image' catchtap='depressive'></image>
       </swiper-item>
     </swiper>
   </view>
