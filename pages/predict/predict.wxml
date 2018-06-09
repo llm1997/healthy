@@ -115,28 +115,17 @@
       <button class='search' plain='true' type='default' bindtap='sInput'>搜索</button>
     </view>
   </view>
-
+<view class='following' hidden='{{following}}'>您的症状符合以下疾病：</view>
   <view class='reason'>
-    <block wx:for-items="{{reason}}" wx:key="item" >
-      <view class='reason_illness' data-illid="{{item.id}}" catchtap='onPostTab'>
-        <text class='reason_illness_text'>{{item.name}}</text>
-        <view class='line'></view>
-      </view>
+    <block wx:for-items="{{reason}}" wx:key="item">
+
+        <view class="weui-panel__bd" data-illid="{{item.id}}" catchtap='onPostTab'>
+          <view class="weui-media-box weui-media-box_text">
+            <view class="illness_name">{{item.name}}</view>
+          </view>
+        </view>
     </block>
   </view>
 
-  <!-- <view>
-    <view class="weui-search-bar">
-      <view class="weui-search-bar__form">
-        <view class="weui-search-bar__box">
-          
-          <input type="text" class="weui-search-bar__input"  value="{{inputVal}}" focus="{{inputShowed}}"  />
-         
-        </view>
-        <label class="weui-search-bar__label" >
-        </label>
-      </view>
 
-    </view>
-  </view> -->
 </view>

@@ -28,8 +28,9 @@
   font-family: "楷体";
   font-weight: 600;
 }
-.button_color{
-  background-color: #ADD8E6;
+
+.button_color {
+  background-color: #add8e6;
 }
 
 .weui-search-bar__cancel-btn {
@@ -38,9 +39,8 @@
 
 .reason {
   display: flex;
-  flex-direction:  row;
+  flex-direction: column;
   flex-wrap: wrap;
-  margin-top: 10px;
 }
 
 .reason_illness {
@@ -62,11 +62,31 @@
   background: #aaa;
 }
 
-.weui-search-bar__cancel-btn{
+.weui-search-bar__cancel-btn {
   font-family: "楷体";
   font-weight: 600;
   font-size: 15px;
 }
-.weui-search-bar{
-  background-color:#AFEEEE;
+
+.weui-search-bar {
+  background-color: #afeeee;
+}
+
+.illness_name {
+  font-family: "楷体";
+  font-weight: 600;
+  background-color: #e0ffff;
+}
+
+.weui-panel__bd {
+  background-color: #afeeee;
+  margin-top: 1px;
+}
+
+.following {
+  margin-top: 2px;
+  background-color: #87CEFA;
+  font-family: "楷体";
+  font-weight: 600;
+  font-size: 40rpx;
 }

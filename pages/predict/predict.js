@@ -20,7 +20,8 @@ Page({
     more_reason5: true,
     more_reason6: true,
     more_more: false,
-    values: []
+    values: [],
+    following: true
   },
 
   // 一栏
@@ -250,7 +251,13 @@ Page({
       }
     } else if (condition1.length > 0) {
       that.data.values[0] = condition1
+      that.setData({
+        following: true
+      })
     } else {
+      this.setData({
+        following: true
+      })
       wx.showToast({
         title: "请输入病情",
         duration: 1000,
@@ -344,11 +351,24 @@ Page({
     var data = {
       syptoms: that.data.values
     };
+    if (!data) {
+      that.setData({
+        following: true
+      })
+    }
     var url = "https://llmsx.top/illpredict";
 
     network.requestLoading(url, data, message, function (res) {
       console.log(res)
-
+      if (res.length <1) {
+        that.setData({
+          following: true
+        })
+      } else {
+        that.setData({
+          following: false
+        })
+      }
       that.setData({
         reason: res
       })
