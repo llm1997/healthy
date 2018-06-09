@@ -76,16 +76,6 @@ Page({
     });
   },
 
-//获取个人信息
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    });
-   
-  },
 
   //搜索事件
   showInput: function () {
@@ -172,26 +162,7 @@ Page({
   },
 
 
-  //
-  /**
- * 处理数据processDoubanDate
- */
 
-  // processDoubanDate: function (illdata) {
-  //   // for (var idx in illdata) {
-  //   //   var ill = illdata.subjects[idx];
-  //   //   var name = subject.name;
-      
-  //   //   var temp = {
-  //   //     name: name,
-  //   //     id: subject.id
-  //   //   }
-  //   //   movies.push(temp);
-  //   // }
-  //   this.setData({
-  //     illdatas: illdata
-  //   })
-  // },
 cold:function(event){
   var illId = 1;
   wx.navigateTo({

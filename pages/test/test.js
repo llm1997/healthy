@@ -67,22 +67,7 @@ Page({
   
   },
 
-  /**
-   * 自定义函数
-   */
-  // getData: function () {
-  //   var that=this;
-  //   console.log("123");
-  //   var url ="http://47.104.213.74:8080/todopost";
-  //   network.requestLoading(url, that.data.params, '正在加载数据', function (res) {
-  //       //res就是我们请求接口返回的数据
-  //        console.log(res)
-  //     }, function () {
-  //        wx.showToast({
-  //           title: '加载数据失败',
-  //        })
-  //     });
-  // },
+
 
   /**
  * 页面相关事件处理函数--监听用户下拉动作
@@ -131,16 +116,10 @@ getIllData:function(){
  */
   getIllInfo: function (message) {
     var that = this;
-    // var data = {
-    //   id:'2',
-    //   name: '头疼',
-    //   desc: '真的是一种可怕的疾病，病情严重可使患者丧失生活和工作能力',
-    //   page: that.data.page
-    // };
+   
     var data = {
       page: that.data.page
     };
-    // var url = "http://47.104.213.74:8080/illpost";
     if(that.data.flag==1)
     {
       var url = "https://llmsx.top/waikeill";
@@ -172,7 +151,7 @@ getIllData:function(){
       var url = "https://llmsx.top/xiazhiill";
     }
     else if (that.data.flag == 9) {
-      var url = "https://localhost/springill";
+      var url = "https://llmsx.top/springill";
     }
     else if (that.data.flag == 10) {
       var url = "https://llmsx.top/summerill";
