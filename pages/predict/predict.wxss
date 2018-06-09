@@ -38,17 +38,22 @@
 
 .reason {
   display: flex;
-  flex-direction: row;
+  flex-direction:  row;
+  flex-wrap: wrap;
   margin-top: 10px;
 }
 
 .reason_illness {
   margin-left: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .reason_illness_text {
   font-size: 50rpx;
   font-family: "华文行楷";
+  display: flex;
+  flex-direction: row;
 }
 
 .line {
