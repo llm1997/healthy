@@ -3,10 +3,10 @@ var network = require("../../../utils/util.js")
 Page({
   data: {
     showTopTips: false,
-    weight:"",
-    BP:"",
-    height:"",
-    advice:[],
+    weight: "",
+    BP: "",
+    height: "",
+    advice: [],
     checkboxItems: [
       { name: 'standard is dealt for u.', value: '0', checked: true },
       { name: 'standard is dealicient for u.', value: '1' }
@@ -39,12 +39,12 @@ Page({
 
     var hour = date1.getHours();
     var minute = date1.getMinutes();
-    var time=hour+":"+minute;
+    var time = hour + ":" + minute;
 
     var that = this
     that.setData({
       date: date,
-      time:time
+      time: time
     })
   },
   showTopTips: function () {
@@ -111,10 +111,49 @@ Page({
   },
 
   loginBtnClick: function (e) {//获取
-     var that=this;
-    console.log("用户名：" + that.data.weight);
-    console.log("用户名：" + that.data.height);
-    that.getIllInfo("加载数据")
+    var that = this;
+    // console.log("用户名：" + that.data.weight);
+    // console.log("用户名：" + that.data.height);
+    if (this.data.height.length > 0 && this.data.weight.length > 0) {
+      if (this.data.height >= 40 && this.data.weight > 2){
+        that.getIllInfo("加载数据")
+      }else{
+        wx.showToast({
+          title: "体重或身高不符合人类最低标准，请重新输入",
+          duration: 1000,
+          icon: 'none'
+        })
+      }
+      
+    } else if (this.data.height.length > 0 && this.data.weight.length < 1) {
+      that.setData({
+        advice: []
+      })
+      wx.showToast({
+        title: "请输入体重",
+        duration: 1000,
+        icon: 'none'
+      })
+    } else if (this.data.height.length < 1 && this.data.weight.length > 0) {
+      that.setData({
+        advice: []
+      })
+      wx.showToast({
+        title: "请输入身高",
+        duration: 1000,
+        icon: 'none'
+      })
+    } else  {
+
+      that.setData({
+        advice: []
+      })
+      wx.showToast({
+        title: "请输入信息",
+        duration: 1000,
+        icon: 'none'
+      })
+    }
   },
   bindTimeChange: function (e) {//改变时间
     this.setData({
@@ -135,17 +174,17 @@ Page({
     var url = "https://llmsx.top/illperson";
 
     network.requestLoading(url, data, message, function (res) {
-      console.log(res)
+      // console.log(res)
 
       that.setData({
         advice: res
       })
-      console.log(that.data.reason)
+      // console.log(that.data.reason)
     }, function (res) {
       wx.showToast({
         title: '加载数据失败',
       })
 
     })
-  },  
+  },
 });
