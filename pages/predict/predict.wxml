@@ -111,19 +111,20 @@
   </view>
   <view class='search-container'>
     <view class='more' bindtap='moreTap' hidden='{{more_more}}'>更多病症>></view>
-    <button class='search' plain='false' size="mini" type='default' bindtap='sInput'>搜索</button>
-
+    <view class='button_color'>
+      <button class='search' plain='true' type='default' bindtap='sInput'>搜索</button>
+    </view>
   </view>
 
   <view class='reason'>
     <block wx:for-items="{{reason}}" wx:key="item">
       <view class='reason_illness' data-illid="{{item.id}}" catchtap='onPostTab'>
         <text class='reason_illness_text'>{{item.name}}</text>
-      <view class='line'></view>
+        <view class='line'></view>
       </view>
     </block>
   </view>
- 
+
   <!-- <view>
     <view class="weui-search-bar">
       <view class="weui-search-bar__form">

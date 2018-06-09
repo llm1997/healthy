@@ -24,11 +24,12 @@
 }
 
 .search {
-  font-size: 70px;
-  padding-right: 250rpx;
   width: 100%;
   font-family: "楷体";
-  font-weight: 600
+  font-weight: 600;
+}
+.button_color{
+  background-color: #ADD8E6;
 }
 
 .weui-search-bar__cancel-btn {
@@ -61,21 +62,6 @@
   font-weight: 600;
   font-size: 15px;
 }
-
-.weui-search-bar__text{
-  font-family: "楷体";
-  font-weight: 600;
-  font-size: 20px;
-}
-
-.weui-search-bar__input{
-  font-family: "楷体";
-  font-weight: 600;
-  font-size: 20px;
-}
-
-.weui-icon-clear{
-  font-family: "楷体";
-  font-weight: 600;
-  font-size: 20px;
+.weui-search-bar{
+  background-color:#AFEEEE;
 }

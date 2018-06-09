@@ -169,7 +169,7 @@ Page({
     wx.navigateTo({
       url: 'result/result?illName=' + illName,
     })
-  }
+  },
 
 
   //
@@ -192,6 +192,11 @@ Page({
   //     illdatas: illdata
   //   })
   // },
-
+cold:function(event){
+  var illId = 1;
+  wx.navigateTo({
+    url: '../index/article/article?illId=' + illId,
+  })
+}
 })
 

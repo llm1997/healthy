@@ -37,8 +37,8 @@
         </view>
         <view class="weui-cells__tips">*号非必填</view>
       
-        <view class="weui-btn-area">
-            <button class="weui-btn" type="primary" bindtap="loginBtnClick">确定</button>
+        <view class="weui-btn-area1">
+            <button class="weui-btn" type="default" plain='true' bindtap="loginBtnClick">确定</button>
         </view>
 
 

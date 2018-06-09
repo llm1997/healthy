@@ -20,7 +20,7 @@ Page({
     more_reason5: true,
     more_reason6: true,
     more_more: false,
-    values:[]
+    values: []
   },
 
   // 一栏
@@ -30,11 +30,11 @@ Page({
     });
   },
   hideInput1: function () {
-    var that=this
+    var that = this
     that.setData({
       inputVal1: "",
       inputShowed1: false,
-      values:[]
+      values: []
     });
     console.log(that.data.inputVal1)
   },
@@ -58,7 +58,8 @@ Page({
   hideInput2: function () {
     this.setData({
       inputVal2: "",
-      inputShowed2: false
+      inputShowed2: false,
+      values: []
     });
   },
   clearInput2: function () {
@@ -80,7 +81,8 @@ Page({
   hideInput3: function () {
     this.setData({
       inputVal3: "",
-      inputShowed3: false
+      inputShowed3: false,
+      values: []
     });
   },
   clearInput3: function () {
@@ -104,7 +106,8 @@ Page({
   hideInput4: function () {
     this.setData({
       inputVal4: "",
-      inputShowed4: false
+      inputShowed4: false,
+      values: []
     });
   },
   clearInput4: function () {
@@ -127,7 +130,8 @@ Page({
   hideInput5: function () {
     this.setData({
       inputVal5: "",
-      inputShowed5: false
+      inputShowed5: false,
+      values: []
     });
   },
   clearInput5: function () {
@@ -149,7 +153,8 @@ Page({
   hideInput6: function () {
     this.setData({
       inputVal6: "",
-      inputShowed6: false
+      inputShowed6: false,
+      values: []
     });
   },
   clearInput6: function () {
@@ -165,11 +170,12 @@ Page({
 
   // 点击搜索接收数据
   sInput: function (event) {
-    var that=this;
+    var that = this;
     // wx.showModal({
     //   title:提示,
     //   content:请按顺序填写
     // })
+    values: [];
     var condition1 = this.data.inputVal1;
     var condition2 = this.data.inputVal2;
     var condition3 = this.data.inputVal3;
@@ -177,14 +183,14 @@ Page({
     var condition5 = this.data.inputVal5;
     var condition6 = this.data.inputVal6;
     if (condition6.length > 0) {
-      if (condition1.length > 0 && condition2.length > 0 && condition3.length > 0 && condition4.length > 0 && condition5.length > 0){
+      if (condition1.length > 0 && condition2.length > 0 && condition3.length > 0 && condition4.length > 0 && condition5.length > 0) {
         that.data.values[0] = condition1
         that.data.values[1] = condition2
         that.data.values[2] = condition3
         that.data.values[3] = condition4
         that.data.values[4] = condition5
         that.data.values[5] = condition6
-      }else{
+      } else {
         wx.showToast({
           title: "请按顺序输入",
           duration: 1000,
@@ -192,7 +198,7 @@ Page({
         })
       }
     } else if (condition5.length > 0) {
-      if (condition1.length > 0 && condition2.length > 0 && condition3.length > 0 && condition4.length > 0 ) {
+      if (condition1.length > 0 && condition2.length > 0 && condition3.length > 0 && condition4.length > 0) {
         that.data.values[0] = condition1
         that.data.values[1] = condition2
         that.data.values[2] = condition3
@@ -206,7 +212,7 @@ Page({
         })
       }
     } else if (condition4.length > 0) {
-      if (condition1.length > 0 && condition2.length > 0 && condition3.length > 0 ) {
+      if (condition1.length > 0 && condition2.length > 0 && condition3.length > 0) {
         that.data.values[0] = condition1
         that.data.values[1] = condition2
         that.data.values[2] = condition3
@@ -219,7 +225,7 @@ Page({
         })
       }
     } else if (condition3.length > 0) {
-      if (condition1.length > 0 && condition2.length > 0 ) {
+      if (condition1.length > 0 && condition2.length > 0) {
         that.data.values[0] = condition1
         that.data.values[1] = condition2
         that.data.values[2] = condition3
@@ -231,10 +237,10 @@ Page({
         })
       }
     } else if (condition2.length > 0) {
-      if (condition1.length > 0 ) {
+      if (condition1.length > 0) {
         that.data.values[0] = condition1
         that.data.values[1] = condition2
-        console.log("123"+that.data.values[1])
+        console.log("123" + that.data.values[1])
       } else {
         wx.showToast({
           title: "请按顺序输入",
@@ -244,18 +250,18 @@ Page({
       }
     } else if (condition1.length > 0) {
       that.data.values[0] = condition1
-    }else {
+    } else {
       wx.showToast({
         title: "请输入病情",
         duration: 1000,
         icon: 'none'
-        
+
       })
     }
 
-    that.getIllInfo("加载数据");
+    that.getIllInfo("");
 
-    
+
   },
 
   // 增加症状
@@ -334,26 +340,26 @@ Page({
    */
   getIllInfo: function (message) {
     var that = this;
-   
+
     var data = {
-      syptoms:that.data.values
+      syptoms: that.data.values
     };
-     var url = "https://llmsx.top/illpredict";
-    
+    var url = "https://llmsx.top/illpredict";
+
     network.requestLoading(url, data, message, function (res) {
       console.log(res)
- 
-        that.setData({
-          reason:res
-        })
-        console.log(that.data.reason)
+
+      that.setData({
+        reason: res
+      })
+      console.log(that.data.reason)
     }, function (res) {
       wx.showToast({
         title: '加载数据失败',
       })
 
     })
-  },  
+  },
 
 
   /**

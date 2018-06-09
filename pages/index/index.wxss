@@ -38,4 +38,36 @@ page, .page, .page__bd {
   font-family: "楷体";
   font-weight: 700
 }
+.add_more{
+  font-family: "楷体";
+  font-weight: 600;
+}
+.weui-cell__bd{
+  font-family: "楷体";
+  font-weight: 600;
+}
+.weui-search-bar__cancel-btn{
+  font-family: "楷体";
+  font-weight: 600;
+  color:  #00bfff;
 
+}
+.page__bd{
+  background-color: "#ADD8E6"
+}
+.weui-media-box_text{
+  border-bottom: 1rpx solid #00bfff
+}
+.weui-media-box_text1{
+   border-bottom: 1rpx solid #00bfff;
+    border-top: 1rpx solid #00bfff
+}
+.weui-navbar__item.weui-bar__item_on {
+  color: #00bfff;
+}
+.weui-navbar__slider{
+  background-color: #00bfff;
+}
+.weui-search-bar{
+  background-color:#AFEEEE;
+}

@@ -12,19 +12,21 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#405f80",
+    "navigationBarBackgroundColor": "#ADD8E6",
     "navigationBarTitleText": "小健康",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "borderStyle": "white",
+    "selectedColor": "#000080",
+    "borderStyle": "#00BFFF",
     "position": "bottom",
     "list": [
       {
         "pagePath": "pages/index/index",
         "text": "百科",
         "iconPath": "images/tab/dianying.png",
-        "selectedIconPath": "images/tab/dianying_hl.png"
+        "selectedIconPath": "images/tab/dianying_hl.png",
+        "color": "#00bfff"
       },
       {
         "pagePath": "pages/predict/predict",

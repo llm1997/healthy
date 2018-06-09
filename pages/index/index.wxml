@@ -4,7 +4,7 @@
   <view>
     <swiper class='swiper' indicator-dots='true' autoplay='true' interval='6000'>
       <swiper-item>
-        <image src='/images/cold.jpg' class='swiper-image'></image>
+        <image src='/images/cold.jpg' class='swiper-image' catchtap='cold'></image>
       </swiper-item>
       <swiper-item>
         <image src='/images/insomnia.jpg' class='swiper-image'></image>
@@ -46,11 +46,11 @@
           </view>
         </block>
 
-         <view class="weui-cells searchbar-result" wx:if="{{findill.data.length > 0}}">
-            <view class="weui-cell__bd" catchtap='findMallTab'>
-              <view>加载更多</view>
-            </view>
-         </view>
+        <view class="weui-cells searchbar-result" wx:if="{{findill.data.length > 0}}">
+          <view class="weui-cell__bd" catchtap='findMallTab'>
+            <view class='add_more'>加载更多</view>
+          </view>
+        </view>
 
       </view>
     </view>
@@ -72,7 +72,7 @@
         <view class="weui-tab__panel">
           <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
             <navigator url='../test/test?addr=1'>
-              <view class="weui-media-box weui-media-box_text">
+              <view class="weui-media-box weui-media-box_text1">
                 <view class="illness_name">外科疾病 </view>
               </view>
             </navigator>
@@ -98,7 +98,7 @@
           <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
 
             <navigator url='../test/test?addr=4'>
-              <view class="weui-media-box weui-media-box_text">
+              <view class="weui-media-box weui-media-box_text1">
                 <view class="illness_name">头部常见病</view>
               </view>
             </navigator>
@@ -126,7 +126,7 @@
           <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
 
             <navigator url='../test/test?addr=4'>
-              <view class="weui-media-box weui-media-box_text">
+              <view class="weui-media-box weui-media-box_text1s">
                 <view class="illness_name">春季常发病</view>
               </view>
             </navigator>

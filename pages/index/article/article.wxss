@@ -40,9 +40,7 @@ image{
    margin-top: 10px; 
     border-radius: 5px; 
 }
-.page__bd{
-  background-image: url("http://image20.it168.com/201507_800x800/2243/88179bc37ca3b4f5.jpg")
-}
+
 .page__hd{
   margin-top: -2px;
 }

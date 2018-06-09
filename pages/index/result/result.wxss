@@ -1,1 +1,11 @@
-/* pages/index/result/result.wxss */
+@import  "../illitem/item-ill-template.wxss";
+.illness_list{
+text-align: center;
+font-family: "楷体";
+font-size: 50rpx;
+background-color: #ADD8E6;
+font-weight: 600;
+}
+.button_color{
+  background-color: #ADD8E6;
+}
