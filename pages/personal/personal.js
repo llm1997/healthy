@@ -21,13 +21,8 @@ Page({
       })
     },
     onLoad: function () {
-        // wx.showNavigationBarLoading();
-        var that = this;
-        console.log("aaa")
-        //调用应用实例的方法获取全局数据
-        that.setData({
-            userInfo:app.globalData.userInfo
-        })
+      
+       
         
     }
 })

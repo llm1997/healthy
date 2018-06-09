@@ -11,7 +11,7 @@ Page({
     pageSize: 5,
     hasMoreData: true,
     contentlist:[],
-    flag:1
+    flag:0
   },
 
   /**
@@ -26,6 +26,8 @@ Page({
     that.setData({
       flag: options.addr
     })
+   console.log("操作"+that.data.flag)
+    that.getIllData()
    
   },
 
@@ -142,18 +144,44 @@ getIllData:function(){
     if(that.data.flag==1)
     {
       var url = "https://llmsx.top/waikeill";
+      console.log("进入外科" + that.data.flag )
     }
-    else if(that.data.flag==2)
+    if(that.data.flag==2)
     {
       var url = "https://llmsx.top/neikeill";
+      
     }
     else if (that.data.flag ==3)
     {
-      var url = "https://llmsx.top/fukeill";
+      var url = "https://llmsx.top/pifuill";
     }
     else if (that.data.flag ==4)
     {
       var url = "https://llmsx.top/erkeill";
+    }
+    else if (that.data.flag == 5) {
+      var url = "https://llmsx.top/toubuill";
+    }
+    else if (that.data.flag == 6) {
+      var url = "https://llmsx.top/xiongbuill";
+    }
+    else if (that.data.flag == 7) {
+      var url = "https://llmsx.top/fubuill";
+    }
+    else if (that.data.flag == 8) {
+      var url = "https://llmsx.top/xiazhiill";
+    }
+    else if (that.data.flag == 9) {
+      var url = "https://localhost/springill";
+    }
+    else if (that.data.flag == 10) {
+      var url = "https://llmsx.top/summerill";
+    }
+    else if (that.data.flag == 11) {
+      var url = "https://llmsx.top/fallill";
+    }
+    else if (that.data.flag == 12) {
+      var url = "https://llmsx.top/winterill";
     }
     network.requestLoading(url, data, message, function (res) {
       console.log(res)
@@ -168,7 +196,7 @@ getIllData:function(){
             contentlist: contentlistTem.concat(content),
             hasMoreData:false
           })
-          console.log(that.data.contentlist[0].name)
+         
         } else {
           console.log("here")
           that.setData({

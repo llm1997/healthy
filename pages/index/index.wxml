@@ -72,7 +72,7 @@
         <view class="weui-tab__panel">
           <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
             <navigator url='../test/test?addr=1'>
-              <view class="weui-media-box weui-media-box_text1">
+              <view class="weui-media-box weui-media-box_text">
                 <view class="illness_name">外科疾病 </view>
               </view>
             </navigator>
@@ -83,7 +83,7 @@
             </navigator>
             <navigator url='../test/test?addr=3'>
               <view class="weui-media-box weui-media-box_text">
-                <view class="illness_name">妇科疾病 </view>
+                <view class="illness_name">皮肤疾病 </view>
               </view>
             </navigator>
 
@@ -97,25 +97,25 @@
 
           <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
 
-            <navigator url='../test/test?addr=4'>
-              <view class="weui-media-box weui-media-box_text1">
+            <navigator url='../test/test?addr=5'>
+              <view class="weui-media-box weui-media-box_text">
                 <view class="illness_name">头部常见病</view>
               </view>
             </navigator>
 
-            <navigator url='../test/test?addr=4'>
+            <navigator url='../test/test?addr=6'>
               <view class="weui-media-box weui-media-box_text">
                 <view class="illness_name">胸部常见病</view>
               </view>
             </navigator>
 
-            <navigator url='../test/test?addr=4'>
+            <navigator url='../test/test?addr=7'>
               <view class="weui-media-box weui-media-box_text">
                 <view class="illness_name">腹部常见病</view>
               </view>
             </navigator>
 
-            <navigator url='../test/test?addr=4'>
+            <navigator url='../test/test?addr=8'>
               <view class="weui-media-box weui-media-box_text">
                 <view class="illness_name">下肢常见病</view>
               </view>
@@ -125,25 +125,25 @@
 
           <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
 
-            <navigator url='../test/test?addr=4'>
-              <view class="weui-media-box weui-media-box_text1s">
+            <navigator url='../test/test?addr=9'>
+              <view class="weui-media-box weui-media-box_text">
                 <view class="illness_name">春季常发病</view>
               </view>
             </navigator>
 
-            <navigator url='../test/test?addr=4'>
+            <navigator url='../test/test?addr=10'>
               <view class="weui-media-box weui-media-box_text">
                 <view class="illness_name">夏季常发病</view>
               </view>
             </navigator>
 
-            <navigator url='../test/test?addr=4'>
+            <navigator url='../test/test?addr=11'>
               <view class="weui-media-box weui-media-box_text">
                 <view class="illness_name">秋季常发病</view>
               </view>
             </navigator>
 
-            <navigator url='../test/test?addr=4'>
+            <navigator url='../test/test?addr=12'>
               <view class="weui-media-box weui-media-box_text">
                 <view class="illness_name">冬季常发病</view>
               </view>

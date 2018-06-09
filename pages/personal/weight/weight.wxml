@@ -25,15 +25,7 @@
             </view>
          
           
-            <view class="weui-cell weui-cell_input weui-cell_vcode">
-                <view class="weui-cell__hd">
-                    <view class="weui-label">*血压</view>
-                </view>
-                <view class="weui-cell__bd">
-                    <input  name="BP" bindinput="BPInput" class="weui-input" placeholder="请输入血压" />
-                </view>
-                
-            </view>
+        
         </view>
         <view class="weui-cells__tips">*号非必填</view>
       
@@ -46,9 +38,11 @@
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell">
                 <view class="weui-cell__bd">
+                 <view class="illness_name">您的BMI指数为:{{advice[0]}}</view>
+                
+                    <view class="illness_name">{{advice[1]}}</view>
                     <textarea class="weui-textarea" placeholder="" style="height: 3.3em" />
-                    <text>您的BMI指数为:{{advice[0]}}</text>
-                    <text>{{advice[1]}}</text>
+                    
                     <view class="weui-textarea-counter">0/400</view>
                 </view>
             </view>

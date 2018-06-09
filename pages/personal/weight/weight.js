@@ -132,7 +132,7 @@ Page({
       weight: that.data.weight,
       height: that.data.height
     };
-    var url = "https://localhost/illperson";
+    var url = "https://llmsx.top/illperson";
 
     network.requestLoading(url, data, message, function (res) {
       console.log(res)

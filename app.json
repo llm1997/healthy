@@ -7,7 +7,6 @@
     "pages/predict/predict",
     "pages/test/test",
     "pages/index/article/article",
-    "pages/wechat/wechat",
     "pages/index/result/result"
   ],
   "window": {
@@ -36,7 +35,7 @@
       },
       {
         "pagePath": "pages/personal/personal",
-        "text": "个人",
+        "text": "其他",
         "iconPath": "images/tab/yuedu.png",
         "selectedIconPath": "images/tab/yuedu_hl.png"
       }
